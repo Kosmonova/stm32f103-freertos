@@ -242,7 +242,8 @@ void StartBlink01(void *argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+    HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+    osDelay(500);
   }
   /* USER CODE END 5 */
 }
@@ -260,7 +261,8 @@ void StartBlink02(void *argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+    HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
+    osDelay(600);
   }
   /* USER CODE END StartBlink02 */
 }
